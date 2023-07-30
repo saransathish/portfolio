@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>404</title>
+    <style>
+
+    @import url('https://fonts.googleapis.com/css2?family=Sacramento&family=Shadows+Into+Light&display=swap');
+
+        body {
+            background-color:black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            
+        }
+        
+        .name {
+            font-size: 400px;
+	    color:green;
+        }
+        
+        .name span {
+            display: inline-block;
+            transition: transform 0.5s;
+        }
+        
+        
+        .name span:hover {
+            animation: rotate 2s infinite linear;
+        }
+        
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+	.name1 {
+            font-size: 350px;
+	    color:blue;
+        }
+
+        
+        .name1 span {
+            display: inline-block;
+            transition: transform 0.5s;
+            animation: rotate 2s infinite linear;
+        }
+        
+        
+        .name1 span:hover {
+            animation: rotate 2s infinite linear;
+        }
+        
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .not-found {
+            text-align: center;
+            font-size: 80px;
+            padding-top: 500px;
+            color: aliceblue;
+            position: absolute;
+            width: 50%;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="name">
+        <span class="word" style="color: orangered;">4</span>
+    </div>
+    <br>
+    <div class="name1">
+        <span class="word" style="color: aliceblue;">&nbsp;🤪</span>
+    </div>
+   <div class="name">
+        <span class="word">4</span>
+    </div>
+    <div class="not-found">
+        <span>oops not found!.....</span>
+    </div>
+    
+    <script>
+        const words = document.querySelectorAll('.word');
+        
+        words.forEach(word => {
+            word.addEventListener('mouseleave', () => {
+                word.style.animation = '';
+            });
+        
+            word.addEventListener('mouseenter', () => {
+                word.style.animation = 'rotate 2s infinite linear';
+            });
+        });
+    </script>
+</body>
+</html>
